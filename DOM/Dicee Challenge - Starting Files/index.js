@@ -44,5 +44,5 @@ else if(randomVar<randomVar1){
     document.querySelector(".container h1").innerHTML="Player 2 wins!";
 }
 else{
-    document.querySelector(".container h1").innerHTML="Draw";
+    document.querySelector(".container h1").innerHTML="Draw!";
 }
