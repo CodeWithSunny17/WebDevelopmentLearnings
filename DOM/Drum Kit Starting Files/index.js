@@ -6,7 +6,7 @@ for (i = 0; i < n; i++) {
 
         var button= this.innerHTML;
         makeSound(button);
-        
+        animation(button);
         
     })
 }
@@ -15,6 +15,7 @@ for (i = 0; i < n; i++) {
 //detecting KEYBOARD press
 document.addEventListener("keydown", function(event){
     makeSound(event.key);
+    animation(event.key);
 }) 
     
 
@@ -54,4 +55,14 @@ function makeSound(key){
         default: console.log(sound)
             break;
     }
+}
+
+function animation(a){
+    
+    var buttonPressed = document.querySelector('.'+a);
+    buttonPressed.classList.add("pressed");
+
+    setTimeout(() => {
+        buttonPressed.classList.remove("pressed");
+    }, 200);
 }
